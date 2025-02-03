@@ -39,6 +39,10 @@ fun LoginScreen(modifier: Modifier = Modifier){
         mutableStateOf("")
     }
 
+    var email by remember {
+        mutableStateOf("")
+    }
+
     var passwordVisible by remember {
          mutableStateOf(false)
     }
@@ -78,10 +82,10 @@ fun LoginScreen(modifier: Modifier = Modifier){
             CustomTextField(
                 modifier = Modifier.fillMaxWidth(),
                 label = "E-mail",
-                value = password,
+                value = email,
                 hint = "Masukan e-mail anda",
                 onValueChange = {
-                        text -> password = text
+                        text -> email = text
                 },
                 leadingIcon = {
                     Icon(
