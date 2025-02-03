@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Face
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.Person
@@ -76,16 +77,16 @@ fun LoginScreen(modifier: Modifier = Modifier){
             )
             CustomTextField(
                 modifier = Modifier.fillMaxWidth(),
-                label = "Password",
+                label = "E-mail",
                 value = password,
-                hint = "Masukan password anda",
+                hint = "Masukan e-mail anda",
                 onValueChange = {
                         text -> password = text
                 },
                 leadingIcon = {
                     Icon(
-                        imageVector = Icons.Default.Lock,
-                        contentDescription = "Password"
+                        imageVector = Icons.Default.Email,
+                        contentDescription = "E-mail"
                     )
                 }
             )
